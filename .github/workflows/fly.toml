@@ -1,0 +1,14 @@
+# fly.toml
+
+# Konfigurasi dasar aplikasi
+app = "bites-journey-2"
+
+# Konfigurasi penyedia (provider)
+[[services]]
+  internal_port = 9000
+  protocol = "tcp"
+
+# Konfigurasi run
+[[deploy.targets]]
+  name = "production"
+  regions = ["sin"]
